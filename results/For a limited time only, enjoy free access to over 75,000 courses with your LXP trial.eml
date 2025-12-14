@@ -1,0 +1,90 @@
+Delivered-To: lwjun3103@gmail.com
+Received: by 2002:ab3:701:0:b0:2c7:da58:ece9 with SMTP id 1csp8739655ltj;
+        Tue, 2 Dec 2025 02:13:48 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IGT1JagpxFVG91D+yTJcwUnUwAI+8PwdKmzlhUfhxFdcK68eoRbFU/2SBCXyLHjVu5RI/8h
+X-Received: by 2002:a05:6a20:2451:b0:361:3bdc:916b with SMTP id adf61e73a8af0-3637daaf546mr27864958637.7.1764670428333;
+        Tue, 02 Dec 2025 02:13:48 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1764670428; cv=none;
+        d=google.com; s=arc-20240605;
+        b=EmA8WbAuUbCEc4Z6HlcuwofUI3SAAazcXTpv9FZ4Lb2hwpsFhu4rW7je5vBQCVpAdF
+         lMh5IxdLvBvQs7DexULMi7/DAaBijnQBZhnl7lLT8EewO7ZfUeOvY8hu7GSTBcKgLBCA
+         UgaA10PmK565plFR/VG0O1Z5zzTujM88+niy/Ccg4EVZThLF5FFF+OlUk+sF84oSnvNC
+         PZAMlPfmM69j6Pze62SBBf9zsFrWf6hx2YTap5gNIw4gNF6c7qvb7EvNB/HYqy+MecoN
+         2LPwdsunpq6DpKQ/UW4nj6suHWOp4LrjvxJCc5Qhlz8RCTMvdgRskBqFCLNjqgbxmpTn
+         wz7A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:message-id:date:to:from:subject:mime-version
+         :dkim-signature:dkim-signature;
+        bh=45ErFLbN2uF4QUVkqVGjkkWe8wN+Oe/1ihKCTrjxCsk=;
+        fh=0tyS6QbjUmTotjB07g//rtuMFKeNQqGIY2caCqFJWTY=;
+        b=J+p4IBsXoUD3UVZ9WMCdFpYDQfhuvRG5juKWFIC8gCvWQy6eg3AphA+g4kYnBXKg7j
+         aDno+NrlPOgnFnfhvTmVhpsbneI3n1QVq7tE2s1Zc7uQ8fYZaGxHsywmojnyDgxjPfJH
+         rlW7nbQzP6L0Eo4xiwdFKfzCfySwHnqJp+fyBRNGNfLhAVenHIRlsOBLjqs97z7mTgLk
+         qGfdfWsymPvoy+yMNLbXJHRCtPIXnpjG9zUYa/w2UQXYnJb/5LhnMWbl/Ln5Y1t4JJMa
+         2j3f9FIlNTs5QZd8KGiHoxXOUx5+NtXgsU+BlRC270q5HD1SD6lP+Hz0g77OKB+G95XM
+         fQKA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@ntuclearninghub.com header.s=se77x3ydoojkqfgkfme2hqkaq2bk6ph7 header.b=D33aIbgt;
+       dkim=pass header.i=@amazonses.com header.s=pd64dbxfdcqqbvadj6zks7h7qe3c33ao header.b=re5HYOGR;
+       spf=pass (google.com: domain of 010e019ade8dd0d9-8991112e-64cb-4f34-9cc3-3f46d082afea-000000@notification.ntuclearninghub.com designates 23.251.232.11 as permitted sender) smtp.mailfrom=010e019ade8dd0d9-8991112e-64cb-4f34-9cc3-3f46d082afea-000000@notification.ntuclearninghub.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=ntuclearninghub.com
+Return-Path: <010e019ade8dd0d9-8991112e-64cb-4f34-9cc3-3f46d082afea-000000@notification.ntuclearninghub.com>
+Received: from e232-11.smtp-out.ap-southeast-1.amazonses.com (e232-11.smtp-out.ap-southeast-1.amazonses.com. [23.251.232.11])
+        by mx.google.com with ESMTPS id 41be03b00d2f7-be4fb2482c8si7539666a12.122.2025.12.02.02.13.47
+        for <lwjun3103@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Tue, 02 Dec 2025 02:13:48 -0800 (PST)
+Received-SPF: pass (google.com: domain of 010e019ade8dd0d9-8991112e-64cb-4f34-9cc3-3f46d082afea-000000@notification.ntuclearninghub.com designates 23.251.232.11 as permitted sender) client-ip=23.251.232.11;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@ntuclearninghub.com header.s=se77x3ydoojkqfgkfme2hqkaq2bk6ph7 header.b=D33aIbgt;
+       dkim=pass header.i=@amazonses.com header.s=pd64dbxfdcqqbvadj6zks7h7qe3c33ao header.b=re5HYOGR;
+       spf=pass (google.com: domain of 010e019ade8dd0d9-8991112e-64cb-4f34-9cc3-3f46d082afea-000000@notification.ntuclearninghub.com designates 23.251.232.11 as permitted sender) smtp.mailfrom=010e019ade8dd0d9-8991112e-64cb-4f34-9cc3-3f46d082afea-000000@notification.ntuclearninghub.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=ntuclearninghub.com
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=se77x3ydoojkqfgkfme2hqkaq2bk6ph7; d=ntuclearninghub.com;
+	t=1764670427;
+	h=Content-Type:MIME-Version:Subject:From:To:Date:Message-ID;
+	bh=6pNO0P++0SWbpEE6QpRIqzbrXr5rhZjhuwqBYMt+gZU=;
+	b=D33aIbgtWfFOyBFgX1c4u8m+5eTHG/MIOjsCLTEwY1e30P6yMl43WmLZRtZVnMU2
+	NmqvJxEwEZ0k+EkoNyuW2TE8KSXEyVSNoTmTPENEzFiHs+C/eIL543FLq84KF9btb3u
+	5SSUIw9uM7dRQeVUc5Xx8BkfZLRNqMGsExYHBjnc=
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/simple;
+	s=pd64dbxfdcqqbvadj6zks7h7qe3c33ao; d=amazonses.com; t=1764670427;
+	h=Content-Type:MIME-Version:Subject:From:To:Date:Message-ID:Feedback-ID;
+	bh=6pNO0P++0SWbpEE6QpRIqzbrXr5rhZjhuwqBYMt+gZU=;
+	b=re5HYOGR++lOML+kq+KMkHAuETIAmvQ4aEoOUm6xZoBCO6WTxqtnYTmN7T4LhWE4
+	kmifDoJOMHbncLLFNa4B5wdguwJVbrmYYWoV2f0va3kjr2H6qfZZnMKRxhpebJVewqo
+	DaC106dv4IHtv1+6tldMkJuZdSgGylspTOzeJBT0=
+Content-Type: multipart/alternative;
+ boundary="===============3942775882120207453=="
+MIME-Version: 1.0
+Subject: For a limited time only,
+ enjoy free access to over 75,000 courses with your LXP trial
+From: noreply-lxp@ntuclearninghub.com
+To: lwjun3103@gmail.com
+Date: Tue, 2 Dec 2025 10:13:47 +0000
+Message-ID: <010e019ade8dd0d9-8991112e-64cb-4f34-9cc3-3f46d082afea-000000@ap-southeast-1.amazonses.com>
+Feedback-ID: ::1.ap-southeast-1.EKhwcrtYYVmHkNt02AAVoLWePFxlkxRh+BYhK/fbmAk=:AmazonSES
+X-SES-Outgoing: 2025.12.02-23.251.232.11
+
+--===============3942775882120207453==
+Content-Type: text/html; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+
+
+                <p>
+                Dear LXP Learner,<br/><br/>
+
+                You have successfully signed up for a 14-day free trial account on NTUC LearningHub’s Learning eXperience Platform (LXP) app.<br/><br/>
+
+                Did you know that you can offset your annual LXP subscription with your SkillsFuture credit?<br/><br/>
+
+                Click <a href='https://www.ntuclearninghub.com/lxp'>here</a> to find out more.<br/><br/>
+
+                Regards,<br/>
+                NTUC LearningHub LXP team<br/>
+                </p>
+                
+--===============3942775882120207453==--

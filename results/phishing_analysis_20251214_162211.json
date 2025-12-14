@@ -1,0 +1,14 @@
+{
+  "risk_score": 80,
+  "risk_level": "HIGH",
+  "indicators_found": [
+    "4 phishing keywords",
+    "1 suspicious URLs"
+  ],
+  "technical_analysis": "Basic analysis (AI unavailable)",
+  "recommendations": [
+    "Exercise caution",
+    "Verify sender independently"
+  ],
+  "confidence": 0.6
+}
